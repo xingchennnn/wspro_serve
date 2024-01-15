@@ -18,16 +18,20 @@ wss.on('connection', (ws , req) => {
 
   clients.forEach((client) => {  //新进入的会给所有人发消息
     if (client.readyState === WebSocket.OPEN) {
-      client.send(name+'加入了房间');
+      let res = JSON.stringify(name+'加入了房间')
+      client.send(res);
     }  
   });
   
   ws.on('message', (message) => {
-    // console.log(`消息: ${message}`);
+    console.log(`消息: ${message}`);
 
+    let data = message.toString()
+
+    console.log(data)
     clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
-        client.send(message);
+        client.send(data);
       }  
     });
   });
