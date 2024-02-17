@@ -9,8 +9,10 @@ const clients = new Set();
 
    
 wss.on('connection', (ws , req) => {
-  const query = url.parse(req.url, true).query;
-  let name = query.name
+  // 使用 URL 类来解析 URL
+  const parsedUrl = new URL(req.url, 'http://localhost'); // 假设你的 WebSocket 服务运行在本地服务器上
+  // const parsedUrl = new URL(req.url, true); // 假设你的 WebSocket 服务运行在本地服务器上
+  const name = parsedUrl.searchParams.get('name');
   clients.add(ws);  //将新进入的加入里面
 
   clients.forEach((client) => {  //新进入的会给所有人发消息
@@ -37,8 +39,8 @@ wss.on('connection', (ws , req) => {
   ws.on('close', () => {
     console.log('客户端连接断开');
     
-    
     clients.delete(ws);
+    // console.log(clients)
   });
 });
 
