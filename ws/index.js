@@ -37,8 +37,8 @@ wss.on('connection', (ws , req) => {
   ws.on('close', () => {
     console.log('客户端连接断开');
     
-    
     clients.delete(ws);
+    // console.log(clients)
   });
 });
 
