@@ -9,8 +9,8 @@ const clients = new Set();
 
    
 wss.on('connection', (ws , req) => {
-  const query = url.parse(req.url, true).query;
-  let name = query.name
+  const myURL = new URL(req.url, `http://${req.headers.host}`);
+  let name = myURL.searchParams.get('name')
   clients.add(ws);  //将新进入的加入里面
 
   clients.forEach((client) => {  //新进入的会给所有人发消息
