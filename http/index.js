@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
 // 错误处理中间件
 app.use(function (err, req, res, next) {
   // 文件路径
-  const filePath = 'C:\\Users\\Administrator\\Desktop\\T\\ws\\server\\logs\\error.log';
+  const filePath = '.\\logs\\error.log';
   //错误信息
   const errMessage = `${getTime()} \n 服务器错误: ${err}\n`
   // 将错误信息写入文件
@@ -46,8 +46,7 @@ function getTime() {
   const seconds = String(currentDate.getSeconds()).padStart(2, '0');
   const milliseconds = String(currentDate.getMilliseconds()).padStart(3, '0');
   // 格式化输出
-  const formattedCurrentTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${milliseconds}`;
-  return formattedCurrentTime
+  return `${year}-${month}-${day} ${hours}:${minutes}:${seconds} ${milliseconds}`
 }
 
 

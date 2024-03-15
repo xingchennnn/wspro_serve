@@ -2,17 +2,19 @@ const mysql = require('mysql')
 
 // 创建连接配置
 const dbConfig = {
-  host: 'http://116.205.138.78',
+  host: '49.234.58.117',
   port: '3306',
   user: 'root',
-  password: 'root',
-  database: 'motion',
+  password: 'root123456',
+  database: 'db_web03',
   multipleStatements: true, //允许多条命令运行
   connectionLimit: 15, // 最大连接数
 };
 
 // 创建连接池
 const cp = mysql.createPool(dbConfig);
+
+
 
 
 // 连接数据库
@@ -42,7 +44,7 @@ function connect(sql, rdata) {
 // 在应用关闭时关闭连接池
 process.on('exit', () => {
   console.log('断开连接')
-  pool.end();
+  cp.end();
 });
 
 module.exports = connect
