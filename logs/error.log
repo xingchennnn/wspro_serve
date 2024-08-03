@@ -94,3 +94,17 @@
  服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
 2024-08-03 11:01:22 125 
  服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-04 02:09:15 514 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:10:37 147 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:10:41 808 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:11:49 352 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:16:56 117 
+ 服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2024-08-04 02:17:29 880 
+ 服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2024-08-04 02:17:54 235 
+ 服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1

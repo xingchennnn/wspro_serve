@@ -14,7 +14,7 @@ app.use(express.json());
 
 // 跨域
 app.use(function (req, res, next) {
-  console.log('请求地址:', req.url , req.body);
+  // console.log('请求地址:', req.url , req.body);
   res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
   res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
