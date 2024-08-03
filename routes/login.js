@@ -2,35 +2,50 @@ const express = require('express');
 const route = express.Router()
 const con = require('../connection/index')
 
-route.get('/', (req, res, next) => {
-    let params = req.query
+//登录
+route.post('/login', (req, res, next) => {
+    let {account, password} = req.body;
+    console.log(account, "--", password)
+
     let sql = `select *
-               from tb_user; `
-    con(sql, params)
+               from user
+               where account = ?;`
+    con(sql, [account])
         .then((result) => {
-            res.send({code: 200, msg: '成功', data: result})
+            if (result.length === 0) return res.send({code: 400, msg: "没有该用户", data: null});
+            let userInfo = result[0]
+            setTimeout(() => {
+                if (userInfo.pwd === password && userInfo.account === account) {
+                    res.send({code: 200, msg: '成功', data: result})
+                } else {
+                    res.send({code: 400, msg: '账号或密码错误', data: null})
+                }
+            }, 1000)
         })
         .catch((err) => {
             next(err)
         })
 })
 
-route.get('/signup', (req, res, next) => {
-    let params = req.query.username
+//更新用户信息
+route.post('/upDateById', (req, res, next) => {
+    let params = req.body.username
     let sql = `select *
-               from tb_user
+               from ws
                where username = ? `
     con(sql, [params]).then(result => {
         let is
-        if (result.length > 0) {
-            is = false
-        } else {
-            is = true
-        }
+        is = result.length === 0;
         res.send({code: 200, msg: '成功', data: is})
     }).catch((err) => {
         next(err)
     })
+})
+
+//注册
+route.post('/register',(req,res,next)=>{
+    let params = req.body
+    console.log(params)
 })
 
 

@@ -4,22 +4,21 @@ const mysql = require('mysql')
 const dbConfig = {
   host: '49.234.58.117',
   port: '3306',
-  user: 'root',
-  password: 'root123456',
-  database: 'db_web03',
+  user: 'ha',
+  password: 'wW2580.2580',
+  database: 'ws' ,
   multipleStatements: true, //允许多条命令运行
   connectionLimit: 15, // 最大连接数
+  waitForConnections: true, // 等待连接池分配连接
+  queueLimit: 0 // 连接池最大排队数量 
 };
 
 // 创建连接池
 const cp = mysql.createPool(dbConfig);
 
-
-
-
 // 连接数据库
 function connect(sql, rdata) {
-  // console.log('进入数据库连接', rdata)
+  console.log('开启链接', rdata)
   return new Promise((resolve, reject) => {
     cp.getConnection((err, connection) => {
       if (err) {
@@ -29,7 +28,8 @@ function connect(sql, rdata) {
       //请求数据
       connection.query(sql, rdata, (error, result) => {
         connection.release();  //释放链接
-        if(error){
+        console.log('释放链接')
+        if (error) {
           reject(error)
           return;
         }
