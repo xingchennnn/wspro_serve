@@ -3,22 +3,38 @@ const app = express();
 const fs = require('fs')
 
 const loginRouter = require("../routes/login")
+// json转换
+app.use(express.json());
 // 处理 HTTP 请求
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
+// app.get('/', (req, res) => {
+//   res.send('Hello, World!');
+// });
+
+// app.use(express.static('public'))
+
+// 跨域
+app.use(function (req, res, next) {
+  // console.log('请求地址:', req.url , req.body);
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+  res.header('X-Powered-By', '3.2.1');
+  res.header('Content-Type', 'application/json;charset=utf-8');
+  next();
 });
 
 // 路由 
-app.use('/login', loginRouter)
-
+app.use('/user', loginRouter)
 
 // 404处理中间件
 app.use(function (req, res, next) {
-  res.send({ code: 404, msg: '未找到相关内容' })
+  console.log('404错误:', req.path);
+  res.send({ code: 404, path: req.path, msg: '没有请求到路由' })
 });
 
 // 错误处理中间件
 app.use(function (err, req, res, next) {
+  console.error('服务器错误:', err.stack);
   // 文件路径
   const filePath = '.\\logs\\error.log';
   //错误信息
@@ -31,8 +47,6 @@ app.use(function (err, req, res, next) {
   });
   res.send({ code: 500, msg: '服务器出现错误' })
 });
-
-
 
 // 时间处理
 function getTime() {

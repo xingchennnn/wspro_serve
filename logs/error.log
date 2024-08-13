@@ -16,3 +16,95 @@
  服务器错误: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
 2024-03-16 01:00:39 461 
  服务器错误: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+2024-04-04 17:39:45 158 
+ 服务器错误: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 2
+2024-04-04 17:41:40 961 
+ 服务器错误: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 2
+2024-04-04 17:44:12 790 
+ 服务器错误: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2
+2024-04-04 17:44:52 137 
+ 服务器错误: Error: ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 2
+2024-05-17 00:37:17 737 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:37:18 090 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:37:19 491 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:37:50 117 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:39:50 363 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:42:18 779 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:42:28 736 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:42:37 392 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:42:43 672 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:42:44 565 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:43:47 210 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:43:50 749 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:03 036 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:04 040 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:28 101 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:41 998 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:42 936 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:50 543 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:44:59 797 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:45:49 485 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:45:50 804 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:45:59 529 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:46:00 506 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:46:00 950 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:46:04 942 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-05-17 00:46:05 926 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'db_web03.tb_user' doesn't exist
+2024-08-03 10:53:21 517 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 10:55:13 420 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 10:56:08 219 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 10:57:53 633 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 10:59:27 117 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 11:00:32 910 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 11:00:49 706 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 11:00:56 784 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-03 11:01:22 125 
+ 服务器错误: Error: ER_NOT_SUPPORTED_AUTH_MODE: Client does not support authentication protocol requested by server; consider upgrading MySQL client
+2024-08-04 02:09:15 514 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:10:37 147 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:10:41 808 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:11:49 352 
+ 服务器错误: Error: ER_NO_DEFAULT_FOR_FIELD: Field 'update_time' doesn't have a default value
+2024-08-04 02:16:56 117 
+ 服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2024-08-04 02:17:29 880 
+ 服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2024-08-04 02:17:54 235 
+ 服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
