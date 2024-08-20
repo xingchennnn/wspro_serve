@@ -1,30 +1,22 @@
 const express = require('express');
 const app = express();
 const fs = require('fs')
+const cors = require('cors')
 
 const loginRouter = require("../routes/login")
+const roomRouter = require("../routes/room")
+
+
+
 // json转换
 app.use(express.json());
-// 处理 HTTP 请求
-// app.get('/', (req, res) => {
-//   res.send('Hello, World!');
-// });
-
-// app.use(express.static('public'))
 
 // 跨域
-app.use(function (req, res, next) {
-  // console.log('请求地址:', req.url , req.body);
-  res.header('Access-Control-Allow-Origin', '*');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
-  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-  res.header('X-Powered-By', '3.2.1');
-  res.header('Content-Type', 'application/json;charset=utf-8');
-  next();
-});
+app.use(cors());
 
 // 路由 
 app.use('/user', loginRouter)
+app.use('/room', roomRouter)
 
 // 404处理中间件
 app.use(function (req, res, next) {

@@ -7,9 +7,7 @@ route.post('/login', (req, res, next) => {
     let {account, password} = req.body;
     console.log(account, "--", password)
 
-    let sql = `select *
-               from user
-               where account = ?;`
+    let sql = `select *  from user where account = ?;`
     con(sql, [account])
         .then((result) => {
             if (result.length === 0) return res.send({code: 400, msg: "没有该用户", data: null});
@@ -30,9 +28,7 @@ route.post('/login', (req, res, next) => {
 //更新用户信息
 route.post('/upDateById', (req, res, next) => {
     let params = req.body.username
-    let sql = `select *
-               from ws
-               where username = ? `
+    let sql = `select * from ws where username = ? `
     con(sql, [params]).then(result => {
         let is
         is = result.length === 0;
@@ -46,9 +42,7 @@ route.post('/upDateById', (req, res, next) => {
 route.post('/register',(req,res,next)=>{
     let params = req.body
     //查询是否存在该用户
-    let sql = `select *
-               from user
-               where account = ? `
+    let sql = `select * from user where account = ? `
     con(sql, [params.account]).then(result => {
         if(result.length !== 0){
             res.send({code: 400, msg: '该用户已存在', data: null})
@@ -74,7 +68,9 @@ route.get('/code',(req,res,next)=>{
     ignoreChars: '0o1i', // 验证码字符中排除 0o1i
     color: true, // 验证码是否有彩色
     noise: 1, //干扰线
-    background: '#666' // 背景颜色
+    background: '#666', // 背景颜色
+      width: 150, // 宽度
+    height: 40, // 高度
   })
   res.send({code:200 , msg:"请求成功" , data:img});
 })

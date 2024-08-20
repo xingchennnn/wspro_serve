@@ -7,7 +7,7 @@ const wss = new WebSocket.Server({ server });
    
 const clients = new Set();
 
-const messageList = []
+const messageList  = []
    
 wss.on('connection', (ws , req) => {
   const myURL = new URL(req.url, `http://${req.headers.host}`);
@@ -28,18 +28,18 @@ wss.on('connection', (ws , req) => {
   });
   
   ws.on('message', (message) => {
-    console.log(`消息: ${message}`);
+    console.log('收到消息:', message);
     //添加进历史消息
-    messageList.push(JSON.parse(message))
-    let str = []
-    str.push(message)
-    let data = str.toString()
+    messageList.push(JSON.parse(message));
+    let str = [];
+    str.push(message);
+    let data = str.toString();
     // console.log('data' , data)
     clients.forEach((client) => {
       if (client.readyState === WebSocket.OPEN) {
         client.send(data);
       }  
-    });
+    })
   });
 
   
