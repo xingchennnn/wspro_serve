@@ -108,3 +108,17 @@
  服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
 2024-08-04 02:17:54 235 
  服务器错误: Error: ER_WRONG_VALUE_COUNT_ON_ROW: Column count doesn't match value count at row 1
+2024-08-21 10:37:29 067 
+ 服务器错误: Error: connect ETIMEDOUT
+2024-08-21 15:29:03 889 
+ 服务器错误: TypeError: Cannot read properties of undefined (reading 'username')
+2024-08-21 15:29:24 925 
+ 服务器错误: TypeError: Cannot read properties of undefined (reading 'username')
+2024-08-21 15:29:29 541 
+ 服务器错误: TypeError: Cannot read properties of undefined (reading 'username')
+2024-08-21 15:33:52 116 
+ 服务器错误: TypeError: Cannot read properties of undefined (reading 'username')
+2024-08-21 15:35:13 095 
+ 服务器错误: Error: ER_NO_SUCH_TABLE: Table 'ws.ws' doesn't exist
+2024-08-21 16:22:05 013 
+ 服务器错误: ReferenceError: name is not defined

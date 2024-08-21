@@ -27,12 +27,16 @@ route.post('/login', (req, res, next) => {
 
 //更新用户信息
 route.post('/upDateById', (req, res, next) => {
-    let params = req.body.username
-    let sql = `select * from ws where username = ? `
-    con(sql, [params]).then(result => {
-        let is
-        is = result.length === 0;
-        res.send({code: 200, msg: '成功', data: is})
+    let query = req.body
+
+  let updates = Object.keys(query).map(key => `${key} = ?`).join(', ');
+  let sql = `UPDATE user SET ${updates} WHERE id = ?`;
+
+  let values = [...Object.values(query), query.id];
+    con(sql, values).then(result => {
+      if (result.affectedRows === 1){
+        res.send({code: 200, msg: '成功' })
+      }
     }).catch((err) => {
         next(err)
     })
@@ -69,10 +73,22 @@ route.get('/code',(req,res,next)=>{
     color: true, // 验证码是否有彩色
     noise: 1, //干扰线
     background: '#666', // 背景颜色
-      width: 150, // 宽度
+    width: 150, // 宽度
     height: 40, // 高度
   })
   res.send({code:200 , msg:"请求成功" , data:img});
+})
+
+//获取用户信息
+route.get('/getUserInfo',(req,res,next)=>{
+    let {id} = req.query
+    console.log(id)
+    let sql = `select * from user  where id=?`
+    con(sql, [id]).then(result=>{
+        res.send({code:200 , msg:"请求成功" , data:result[0]});
+    }).catch((err)=>{
+        next(err)
+    })
 })
 
 

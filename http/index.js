@@ -11,8 +11,20 @@ const roomRouter = require("../routes/room")
 // json转换
 app.use(express.json());
 
+// 解析 URL 编码的请求体（例如传统的表单提交）
+app.use(express.urlencoded({ extended: true }));
 // 跨域
 app.use(cors());
+app.use(function (req, res, next) {
+  // console.log('请求地址:', req.url , req.body);
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild');
+  res.header('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
+  res.header('X-Powered-By', '3.2.1');
+  res.header('Content-Type', 'application/json;charset=utf-8');
+  next();
+});
+
 
 // 路由 
 app.use('/user', loginRouter)
