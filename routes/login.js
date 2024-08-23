@@ -14,7 +14,7 @@ route.post('/login', (req, res, next) => {
             let userInfo = result[0]
             setTimeout(() => {
                 if (userInfo.pwd === password && userInfo.account === account) {
-                    res.send({code: 200, msg: '成功', data: result})
+                    res.send({code: 200, msg: '成功', data: userInfo})
                 } else {
                     res.send({code: 400, msg: '账号或密码错误', data: null})
                 }
